@@ -7,6 +7,7 @@ from housing.exception import HousingException
 from housing.logger import logging
 from six.moves import urllib
 import tarfile
+from zipfile import ZipFile
 import pandas as pd
 import numpy as np
 
