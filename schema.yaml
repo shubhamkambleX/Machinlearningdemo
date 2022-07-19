@@ -1,0 +1,20 @@
+colunms:
+  empid: int
+  satisfaction_level: float
+  last_evaluation: float
+  number_project: int 
+  average_montly_hours: int  
+  time_spend_company: int  
+  Work_accident: int  
+  promotion_last_5years: int  
+  salary: category 
+  left: int
+
+
+target_column: left
+
+domain_value:
+  salary:
+    - low
+    - medium
+    - high
