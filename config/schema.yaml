@@ -1,5 +1,4 @@
-colunms:
-  empid: int
+columns:
   satisfaction_level: float
   last_evaluation: float
   number_project: int 
@@ -7,13 +6,43 @@ colunms:
   time_spend_company: int  
   Work_accident: int  
   promotion_last_5years: int  
-  salary: category 
   left: int
+  sales: category
+  salary: category 
+  
+
+
+numerical_columns:
+  - satisfaction_level
+  - last_evaluation
+  - number_project
+  - average_montly_hours
+  - time_spend_company
+  - Work_accident
+  - promotion_last_5years
+
+
+
+categorical_columns:
+  - sales
+  - salary
 
 
 target_column: left
 
+
 domain_value:
+  sales:
+    - sales
+    - technical
+    - support
+    - IT
+    - product_mng
+    - marketing
+    - RandD
+    - accounting
+    - hr
+    - management
   salary:
     - low
     - medium

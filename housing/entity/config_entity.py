@@ -9,12 +9,12 @@ DataValidationConfig = namedtuple("DataValidationConfig",
 ["schema_file_path","report_file_path","report_page_file_path"])
 
 
-DataTranformationConfig = namedtuple("DataTranformationConfig",
+DataTransformationConfig = namedtuple("DataTransformationConfig",
 ["add_bedroom_per_room","transformed_train_dir","transformed_test_dir","preprocessed_object_file_path"])
 
 
 ModelTrainerConfig = namedtuple("ModelTrainerConfig",
-["trained_model_file_path","base_accuracy"])
+["trained_model_file_path","base_accuracy","model_config_file_path"])
 
 
 ModelEvalutionConfig = namedtuple("ModelEvalutionConfig",

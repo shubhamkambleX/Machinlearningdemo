@@ -1,5 +1,4 @@
 from sklearn.model_selection import StratifiedShuffleSplit
-from housing.constant import DATA_INGESTION_ARTIFACT_DIR
 from housing.entity.config_entity import DataIngestionConfig
 from housing.entity.artifact_entity import DataIngestionArtifact
 import os,sys
@@ -7,9 +6,7 @@ from housing.exception import HousingException
 from housing.logger import logging
 from six.moves import urllib
 import tarfile
-from zipfile import ZipFile
 import pandas as pd
-import numpy as np
 
 
 
@@ -85,8 +82,8 @@ class DataIngestion:
             split = StratifiedShuffleSplit(n_splits=1,test_size=0.2,random_state=42)
             
             for train_index,test_index in split.split(housing_data_frame,housing_data_frame["left"]):
-                strat_train_set = housing_data_frame.loc[train_index].drop(['left'],axis=1)
-                strat_test_set = housing_data_frame.loc[test_index].drop(['left'],axis=1)
+                strat_train_set = housing_data_frame.loc[train_index]
+                strat_test_set = housing_data_frame.loc[test_index]
             
             train_file_path = os.path.join(self.data_ingestion_config.ingested_train_dir,file_name)
             test_file_path = os.path.join(self.data_ingestion_config.ingested_test_dir,file_name)

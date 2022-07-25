@@ -1,5 +1,5 @@
 
-from housing.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTranformationConfig, \
+from housing.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransformationConfig, \
 ModelPusherConfig,ModelTrainerConfig,ModelEvalutionConfig,TrainingPipelineConfig
 from housing.exception import HousingException
 from housing.util.util import read_yaml_file
@@ -101,7 +101,7 @@ class Configuration:
         except Exception as e :
             raise HousingException(e,sys) from e 
     
-    def get_data_transformed_config(self) -> DataTranformationConfig:
+    def get_data_transformation_config(self) -> DataTransformationConfig:
         try:
             artifact_dir = self.training_pipeline_config.artifactdir
             data_transform_artifact_dir = os.path.join(
@@ -134,7 +134,7 @@ class Configuration:
             )
             
 
-            data_transformation_config=DataTranformationConfig(
+            data_transformation_config=DataTransformationConfig(
                 add_bedroom_per_room=add_bedroom_per_room,
                 preprocessed_object_file_path=preprocessed_object_file_path,
                 transformed_train_dir=transformed_train_dir,
@@ -147,9 +147,9 @@ class Configuration:
         except Exception as e:
             raise HousingException(e,sys) from e 
     
-    def get_Model_trainer_config(self) -> ModelTrainerConfig:
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
         try:
-            artifact_dir = self.training_pipeline_config.artifact_dir
+            artifact_dir = self.training_pipeline_config.artifactdir
 
             model_trainer_artifact_dir=os.path.join(
                 artifact_dir,

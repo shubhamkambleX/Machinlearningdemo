@@ -1,7 +1,7 @@
 {
       "data_drift": {
             "name": "data_drift",
-            "datetime": "2022-07-21 20:10:26.360472",
+            "datetime": "2022-07-25 21:58:48.633191",
             "data": {
                   "utility_columns": {
                         "date": null,
@@ -17,6 +17,7 @@
                         "Work_accident",
                         "average_montly_hours",
                         "last_evaluation",
+                        "left",
                         "number_project",
                         "promotion_last_5years",
                         "satisfaction_level",
@@ -31,7 +32,7 @@
                         "xbins": null
                   },
                   "metrics": {
-                        "n_features": 9,
+                        "n_features": 10,
                         "n_drifted_features": 0,
                         "share_drifted_features": 0.0,
                         "dataset_drift": false,
@@ -213,6 +214,66 @@
                               "feature_type": "num",
                               "stattest_name": "Wasserstein distance (normed)",
                               "drift_score": 0.008832009641712995,
+                              "drift_detected": false
+                        },
+                        "left": {
+                              "current_small_hist": [
+                                    [
+                                          7.62,
+                                          0.0,
+                                          0.0,
+                                          0.0,
+                                          0.0,
+                                          0.0,
+                                          0.0,
+                                          0.0,
+                                          0.0,
+                                          2.380000000000001
+                                    ],
+                                    [
+                                          0.0,
+                                          0.1,
+                                          0.2,
+                                          0.30000000000000004,
+                                          0.4,
+                                          0.5,
+                                          0.6000000000000001,
+                                          0.7000000000000001,
+                                          0.8,
+                                          0.9,
+                                          1.0
+                                    ]
+                              ],
+                              "ref_small_hist": [
+                                    [
+                                          7.618968247353946,
+                                          0.0,
+                                          0.0,
+                                          0.0,
+                                          0.0,
+                                          0.0,
+                                          0.0,
+                                          0.0,
+                                          0.0,
+                                          2.3810317526460545
+                                    ],
+                                    [
+                                          0.0,
+                                          0.1,
+                                          0.2,
+                                          0.30000000000000004,
+                                          0.4,
+                                          0.5,
+                                          0.6000000000000001,
+                                          0.7000000000000001,
+                                          0.8,
+                                          0.9,
+                                          1.0
+                                    ]
+                              ],
+                              "feature_type": "num",
+                              "stattest_name": "Jensen-Shannon distance",
+                              "drift_score": 8.565096740582685e-05,
                               "drift_detected": false
                         },
                         "number_project": {
@@ -482,7 +543,7 @@
                               ],
                               "feature_type": "cat",
                               "stattest_name": "Jensen-Shannon distance",
-                              "drift_score": 0.017522007750955856,
+                              "drift_score": 0.017522007750957577,
                               "drift_detected": false
                         },
                         "sales": {
@@ -540,11 +601,11 @@
                               ],
                               "feature_type": "cat",
                               "stattest_name": "Jensen-Shannon distance",
-                              "drift_score": 0.015304681735062515,
+                              "drift_score": 0.015304681735063065,
                               "drift_detected": false
                         }
                   }
             }
       },
-      "timestamp": "2022-07-21 20:10:26.360472"
+      "timestamp": "2022-07-25 21:58:48.633191"
 }
