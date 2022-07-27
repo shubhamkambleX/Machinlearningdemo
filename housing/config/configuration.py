@@ -1,6 +1,6 @@
 
 from housing.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransformationConfig, \
-ModelPusherConfig,ModelTrainerConfig,ModelEvalutionConfig,TrainingPipelineConfig
+ModelPusherConfig,ModelTrainerConfig,ModelEvaluationConfig,TrainingPipelineConfig
 from housing.exception import HousingException
 from housing.util.util import read_yaml_file
 from housing.constant import *
@@ -178,11 +178,11 @@ class Configuration:
         except Exception as e:
             raise HousingException(e,sys) from e
     
-    def get_Model_evalution_config(self) -> ModelEvalutionConfig:
+    def get_model_evalution_config(self) -> ModelEvaluationConfig:
         try:
             model_evaluation_config = self.config_info[MODEL_EVALUATION_CONFIG_KEY]
             artifact_dir = os.path.join(
-                self.training_pipeline_config.artifact_dir,
+                self.training_pipeline_config.artifactdir,
                 MODEL_EVALUATION_ARTIFACT_DIR,
                 self.time_stamp
                 )
@@ -191,7 +191,7 @@ class Configuration:
                 artifact_dir,
                 model_evaluation_config[MODEL_EVALUATION_FILE_NAME_KEY]
                 )
-            response = ModelEvalutionConfig(
+            response = ModelEvaluationConfig(
                 model_evaluation_file_path=model_evaluation_file_path,
                 time_stamp=self.time_stamp
                 )
@@ -200,7 +200,7 @@ class Configuration:
         except Exception as e:
             raise HousingException(e,sys) from e
     
-    def get_Model_pusher_config(self) -> ModelPusherConfig:
+    def get_model_pusher_config(self) -> ModelPusherConfig:
         try:
             time_stamp = f"{datetime.now().strftime('%Y%m%d%H%M%S')}"
             model_pusher_config_info = self.config_info[MODEL_PUSHER_CONFIG_KEY]
