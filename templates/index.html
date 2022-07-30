@@ -16,50 +16,50 @@
             <legend>Housing Estimation Form</legend>
             <div class="mb-3">
                 <label class="form-label">satisfaction_level</label>
-                <input class="form-control" type="text" name="satisfaction_level" placeholder="Enter a value of longitude"
+                <input class="form-control" type="text" name="satisfaction_level" placeholder="Enter a value of  Satisfaction level"
                     required />
             </div>
             <div class="mb-3">
                 <label class="form-label">last_evaluation</label>
-                <input class="form-control" type="text" name="last_evaluation" placeholder="Enter a value of latitude"
+                <input class="form-control" type="text" name="last_evaluation" placeholder="Enter a value of last evaluation"
                     required />
 
             </div>
             <div class="mb-3">
                 <label class="form-label">number_project</label>
                 <input class="form-control" type="text" name="number_project"
-                    placeholder="Enter a value of number_project" />
+                    placeholder="Enter a value of Number Project" />
 
             </div>
             <div class="mb-3">
                 <label class="form-label">average_montly_hours</label>
-                <input class="form-control" type="text" name="average_montly_hours" placeholder="Enter a value of total_rooms"
+                <input class="form-control" type="text" name="average_montly_hours" placeholder="Enter a value of Average Montly hours"
                     required />
 
             </div>
             <div class="mb-3">
                 <label class="form-label">time_spend_company</label>
                 <input class="form-control" type="text" name="time_spend_company"
-                    placeholder="Enter a value of total_bedrooms" required />
+                    placeholder="Enter a value of time spend company" required />
             </div>
             <div class="mb-3">
                 <label class="form-label">Work_accident</label>
-                <input class="form-control" type="text" name="Work_accident" placeholder="Enter a value of population"
+                <input class="form-control" type="text" name="Work_accident" placeholder="Enter a value of Work accident"
                     required />
             </div>
             <div class="mb-3">
                 <label class="form-label">promotion_last_5years</label>
-                <input class="form-control" type="text" name="promotion_last_5years" placeholder="Enter a value of households"
+                <input class="form-control" type="text" name="promotion_last_5years" placeholder="Enter a value of Promotion last 5years"
                     required />
             </div>
             <div class="mb-3">
                 <label class="form-label">sales</label>
                 <input class="form-control" type="text" name="sales"
-                    placeholder="Enter a value of median_income" required />
+                    placeholder="Enter a value of Sales" required />
             </div>
             <div class="mb-3">
                 <label class="form-label">salary</label>
-                <select class="form-control" name="salary" placeholder="Enter a value of ocean_proximity"
+                <select class="form-control" name="salary" placeholder="Enter a value of Salary"
                     required>
 
                     <option value="low">
@@ -76,7 +76,7 @@
             </div>
             <div class="mb-3">
 
-                <input class="btn btn-primary" type="submit" value="Predict Median House Value" required />
+                <input class="btn btn-primary" type="submit" value="Prediction" required />
             </div>
 
         </form>
@@ -108,7 +108,7 @@
             {% endfor %}
             <tr>
 
-                <td>median_house_value </td>
+                <td>left </td>
                 <td>
                     {{ context['left'] }}
                 </td>
@@ -118,7 +118,7 @@
         {% else %}
        
               <h5 class="card-title">Submit Form</h5>
-              <p class="card-text">Kindly provide necessary information to estimate housing price in california</p>
+              <p class="card-text">Kindly provide necessary information to estimate HR Employee Retension Prediction </p>
             
          
 
